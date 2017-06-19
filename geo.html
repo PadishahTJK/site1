@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>GeoLocation </title>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <a href="#" id="get_location">Get Location</a>
+            <div id="map">
+                <iframe id="google_map" width="450" height="500" 
+                    framehold="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://maps.google.se?output=embed"></iframe>
+                
+            </div>
+            
+        <!--Event handler    scrip s schould be  external actually--->
+ <script>
+    
+    var c=function(pos){
+    
+    var lat = pos.coords.latitude;
+    var lon = pos.coords.longitude;
+    coords    =lat + ','+lon;
+    
+ /*  document.getElementById('google_map').setAttribute('src','https://maps.google.com/?q='+coords+'&z=18&output=embed');
+  */
+        
+        
+        }
+        
+         document.getElementById('get_location').onclick=function()
+    {
+        navigator.geolocation.getCurrentPosition(c);
+               return false;
+    }
+   
+   </script>
+            
+            
+        </body>
+     </html>
