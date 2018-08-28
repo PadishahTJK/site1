@@ -14,27 +14,25 @@
                 
             </div><aside></aside>
             
-        <!--Event handler    scrip s schould be  external actually--->
- <script>
-    
-    var c=function(pos){
-    
-    var lat = pos.coords.latitude;
-    var lon = pos.coords.longitude;
-    coords    =lat + ','+lon;
-    
- /* 
-  document.getElementById('google_map')
-  .setAttribute('src','https://maps.google.com/?q='+coords+'&z=18&output=embed');
-  */
-}
-        
-document.getElementById('get_location').onclick=function()
-    {
-        navigator.geolocation.getCurrentPosition(c);
-               return false;
-    }
+        <!-- Event handler    scrip s schould be  external actually -->
+ <script>   
+ var c=function(pos){   
+        var lat = pos.coords.latitude;
+        var lon = pos.coords.longitude;
+        coords    =lat + ','+lon;  
+        /* 
+        document.getElementById('google_map')
+        .setAttribute('src','https://maps.google.com/?q='+coords+'&z=18&output=embed');
+        */
+}        
+    document.getElementById('get_location').onclick=function()
+        {
+            navigator.geolocation.getCurrentPosition(c);
+                return false;
+        }
    
-   </script>                    
-        </body>
-     </html>
+</script>  
+
+<h3>Position:</h3>                  
+</body>
+</html>
